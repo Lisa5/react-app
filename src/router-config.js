@@ -1,5 +1,4 @@
 
-import App from './App'
 import About from './About/About'
 import Inbox from './Inbox/Inbox'
 import Message from './Inbox/Message'
@@ -11,7 +10,7 @@ const routeConfig = [
   { path: '/inbox',
     component: Inbox,
     routes: [
-      { path: '/inbox/message',
+      { path: '/inbox/message/:id',
         component: Message
       }
     ]

@@ -15,11 +15,6 @@ const RouteWithSubRoutes = (route) => (
     <route.component {...props} routes={route.routes}/>
   )}/>
 )
-const RegisterRoutes = (routes) => {
-    routes.map((route, i) => (
-        <RouteWithSubRoutes key={i} {...route}/>
-    ))
-}
 
 ReactDOM.render(
     <Router >
@@ -33,3 +28,5 @@ ReactDOM.render(
     </Router>,
     document.getElementById('root'));
 registerServiceWorker();
+
+export { RouteWithSubRoutes };
